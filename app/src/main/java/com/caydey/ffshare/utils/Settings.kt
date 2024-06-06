@@ -31,9 +31,13 @@ class Settings(private val context: Context) {
         get() = preferences.getBoolean(CONVERT_VIDEOS_TO_MP4, true)
         set(value) = setPreference(CONVERT_VIDEOS_TO_MP4, value)
 
-    var convertAudiosToMP3: Boolean
+    var convertAudiosToMp3: Boolean
         get() = preferences.getBoolean(CONVERT_AUDIOS_TO_MP3, true)
         set(value) = setPreference(CONVERT_AUDIOS_TO_MP3, value)
+
+    var convertImagesToJpg: Boolean
+        get() = preferences.getBoolean(CONVERT_IMAGES_TO_JPG, true)
+        set(value) = setPreference(CONVERT_IMAGES_TO_JPG, value)
 
     var convertGifToMp4: Boolean
         get() = preferences.getBoolean(CONVERT_GIF_TO_MP4, false)
@@ -79,6 +83,18 @@ class Settings(private val context: Context) {
         get() = preferences.getString(COMPRESSION_PRESET, "medium")!!
         set(value) = setPreference(COMPRESSION_PRESET, value)
 
+    var customVideoParams: String
+        get() = preferences.getString(CUSTOM_VIDEO_PARAMS, "")!!
+        set(value) = setPreference(CUSTOM_VIDEO_PARAMS, value)
+
+    var customImageParams: String
+        get() = preferences.getString(CUSTOM_IMAGE_PARAMS, "")!!
+        set(value) = setPreference(CUSTOM_IMAGE_PARAMS, value)
+
+    var customAudioParams: String
+        get() = preferences.getString(CUSTOM_AUDIO_PARAMS, "")!!
+        set(value) = setPreference(CUSTOM_AUDIO_PARAMS, value)
+
     private fun setPreference(key: String, value: String) {
         preferences.edit().putString(key, value).apply()
     }
@@ -95,6 +111,7 @@ class Settings(private val context: Context) {
         const val COMPRESSED_MEDIA_CUSTOM_NAME = "pref_compressed_media_custom_name"
         const val CONVERT_VIDEOS_TO_MP4 = "pref_convert_videos_to_mp4"
         const val CONVERT_AUDIOS_TO_MP3 = "pref_convert_audios_to_mp3"
+        const val CONVERT_IMAGES_TO_JPG = "pref_convert_images_to_jpg"
         const val CONVERT_GIF_TO_MP4 = "pref_convert_gif_to_mp4"
         const val SHOW_STATUS_MESSAGES = "pref_show_status_messages"
         const val VIDEO_CRF = "pref_video_crf"
@@ -106,5 +123,8 @@ class Settings(private val context: Context) {
         const val LAST_VERSION = "pref_last_version"
         const val SAVE_LOGS = "pref_save_logs"
         const val COMPRESSION_PRESET = "pref_compression_preset"
+        const val CUSTOM_VIDEO_PARAMS = "pref_custom_video_params"
+        const val CUSTOM_IMAGE_PARAMS = "pref_custom_image_params"
+        const val CUSTOM_AUDIO_PARAMS = "pref_custom_audio_params"
     }
 }

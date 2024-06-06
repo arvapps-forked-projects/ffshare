@@ -66,8 +66,8 @@
     <string name="settings_compressed_media_custom_name_summary">Only applicable if "Custom" is selected for compressed media name</string>
 
     <string name="settings_convert_videos_to_mp4">Convert all video formats to mp4</string>
-
     <string name="settings_convert_audios_to_mp3">Convert all audio formats to mp3</string>
+    <string name="settings_convert_images_to_jpg" tools:ignore="MissingTranslation">Convert all image formats to jpg</string>
 
     <string name="settings_convert_gif_to_mp4">Convert gif to mp4</string>
 
@@ -87,6 +87,12 @@
     <string name="settings_max_video_resolution_summary" tools:ignore="MissingTranslation">Reduce the video output resolution</string>
     <string name="settings_max_image_resolution" tools:ignore="MissingTranslation">Max image resolution</string>
     <string name="settings_max_image_resolution_summary" tools:ignore="MissingTranslation">Reduce the image output resolution</string>
+
+    <string name="settings_custom_params_title" tools:ignore="MissingTranslation">Custom Parameters</string>
+    <string name="settings_custom_params_summary" tools:ignore="MissingTranslation">If set, only these parameters will be used</string>
+    <string name="settings_custom_video_params" tools:ignore="MissingTranslation">Custom Video Parameters</string>
+    <string name="settings_custom_image_params" tools:ignore="MissingTranslation">Custom Image Parameters</string>
+    <string name="settings_custom_audio_params" tools:ignore="MissingTranslation">Custom Audio Parameters</string>
 
     <string name="settings_interface_options_title">Interface</string>
 
